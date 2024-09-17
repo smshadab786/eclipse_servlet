@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel='stylesheet' href='style1.css'>
+</head>
+<body>
+<form id='userForm' action='UpdateUser' method='post'>
+	<div class='title'>
+		<h2>Update user</h2>
+	</div>
+	<div class='form-field'>
+		<label>UserId</label>
+		<input type='number' name='userId' readonly>
+	</div>
+	<div class='form-field' style='margin-top:30px'>
+		<label>fullName</label>
+		<input type='text' name='fullName'>
+	</div>
+	<div class='form-field'>
+		<label>Email</label>
+		<input type='email' name='emailId'>
+	</div>
+	<div class='form-field'>
+		<label>User type</label>
+		<select name='role'>
+			<option selected value=''>Select Value</option>
+			<option value="admin"> Admin</option>
+			<option value="client">Client</option>
+			<option value="manager">Manager</option>
+		</select>
+	</div>
+	<div class='button-field'>
+		<input type='submit' value='Update user'>
+		<input type='reset' value='Cancel'>
+	</div>
+</form>
+<script>
+	const params=new URLSearchParams(window.location.search);
+	var userId=params.get('id');
+	var fullName=params.get('fn');
+	var userName=params.get('user');
+	var role=params.get('role');
+	
+	document.getElementById('userForm').userId.value=userId;
+	document.getElementById('userForm').fullName.value=fullName;
+	document.getElementById('userForm').emailId.value=userName;
+	document.getElementById('userForm').role.value=role;
+	
+	
+	
+</script>
+</body>
+</html>

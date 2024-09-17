@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script defer src='script.js'></script>
+<link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link rel='stylesheet' href='style.css' >
+</head>
+<body>
+<div class='header'>
+	<h2>User management System</h2>
+	<div class='field' style='display:flex; '>
+		<button id='btnAdd'>Add user<i class="ri-add-large-fill"></i></button>
+		<a href='GetUsers'>View users</a>
+	</div>
+</div>
+<form id='userForm' action='AddUser' method='post' >
+	<div class='title'>
+		<h2>User form</h2>
+	</div>
+	<div class='form-field' style='margin-top:30px'>
+		<label>fullName</label>
+		<input type='text' name='fullName'>
+	</div>
+	<div class='form-field'>
+		<label>Email</label>
+		<input type='email' name='emailId'>
+	</div>
+	<div class='form-field'>
+		<label>User type</label>
+		<select name='role'>
+			<option selected value=''>Select Value</option>
+			<option value="admin"> Admin</option>
+			<option value="client">Client</option>
+			<option value="manager">Manager</option>
+		</select>
+	</div>
+	<div class='button-field'>
+		<input type='submit' value='Submit user form'>
+		<input type='reset' value='Cancel'>
+	</div>
+</form>
+</body>
+</html>
